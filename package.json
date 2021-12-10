@@ -1,0 +1,16 @@
+{
+  "name": "build-node-cli",
+  "version": "0.0.1",
+  "description": "CLI to build your own Node.js cli",
+  "main": "index.js",
+  "bin": {
+    "build-node-cli": "index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-handle-unhandled": "^1.1.1",
+    "cli-welcome": "^2.2.2",
+    "copy-template-dir": "^1.4.0"
+  }
+}

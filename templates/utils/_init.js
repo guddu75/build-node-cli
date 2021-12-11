@@ -6,17 +6,17 @@ const unhandled = require('cli-handle-unhandled');
 
 
 
-module.exports = () => {
+module.exports = ({clear}) => {
     unhandled();
     welcome({
-        title: `build-node-cli`,
-        tagLine: `By Debapriya Majumder`,
+        title: `{{name}}`,
+        tagLine: `By {{authorName}}`,
         description : pkg.description,
         bgColor: `#FADC00`,
         color: `#000000`,
         bold: true,
-        clear: true,
-        version: pkg.version
+        version: pkg.version,
+        clear
     });
 }
 

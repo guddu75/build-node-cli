@@ -14,6 +14,7 @@ const ask = require('./utils/ask');
     init();
 
     const name = await ask({message : `CLI name ?`, hint : `(kebab-case only)`});
+    const command = await ask({message : `CLI command ?`, hint : `(Optional : if command is different from CLI name)`});
     const description = await ask({message : `CLI description ?`});
     const version = await ask({message : `version ?`, initial : `0.0.1`});
     const license = await ask({message : `License ?`, initial : `UNLICENSED`});
@@ -23,6 +24,7 @@ const ask = require('./utils/ask');
 
     const vars = {
         name ,
+        command : command ? command : name ,
         description,
         version,
         license,

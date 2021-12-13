@@ -6,7 +6,19 @@
   "bin": {
     "build-node-cli": "index.js"
   },
-  "author": "",
+  "keywords": [
+    "build-node-cli",
+    "cli",
+    "node"
+  ],
+  "files": [
+    "index.js",
+    "utils"
+  ],
+  "author": {
+    "name": "Debapriya Majumder",
+    "email": "guddumajumder75@gmail.com"
+  },
   "license": "ISC",
   "dependencies": {
     "await-to-js": "^3.0.0",

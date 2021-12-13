@@ -15,8 +15,8 @@ const {clear , debug} = flags;
 
     init({clear});
     input.includes(`help`) && log(info);
-    await generate();
 
     debug && log(flags);
+    await generate();
 
 })();

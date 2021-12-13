@@ -6,7 +6,7 @@ const unhandled = require('cli-handle-unhandled');
 
 
 
-module.exports = () => {
+module.exports = ({clear = true}) => {
     unhandled();
     welcome({
         title: `build-node-cli`,
@@ -15,8 +15,8 @@ module.exports = () => {
         bgColor: `#FADC00`,
         color: `#000000`,
         bold: true,
-        clear: true,
-        version: pkg.version
+        version: pkg.version,
+        clear
     });
 }
 

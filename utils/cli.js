@@ -29,7 +29,7 @@ const commands = {
 };
 
 const helpText = meowHelp({
-    name : `{{command}}`,
+    name : `build-node-cli`,
     flags,
     commands
 });

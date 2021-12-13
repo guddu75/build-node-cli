@@ -17,7 +17,7 @@ module.exports = async () => {
     copy(inDirPath,outDirPath,vars, async (err, createdfiles) =>{
         if(err) throw err;
 
-        console.log(d(`Creating fils in ${g(`./${outDir}`)} directory\n`));
+        console.log(d(`\nCreating fils in ${g(`./${outDir}`)} directory\n`));
 
         createdfiles.forEach(file => {
             console.log(`${g(`Created`)} ${file}`);

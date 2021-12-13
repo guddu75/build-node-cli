@@ -1,11 +1,23 @@
 const fs = require('fs');
+const path = require('path');
 const { Input } = require('enquirer');
 const to = require('await-to-js').default;
 const handleError = require('cli-handle-error');
 const shouldCancel = require('cli-should-cancel');
-
+const { Store } = require('data-store');
 
 module.exports = async ({name,message,hint,initial}) => {
+
+    let history = false;
+
+    if(!initial && name !== `command` && name !== `name` && name !== `description`){
+        history = {
+            autosave : true,
+            store : new Store({
+                path : path.join(__dirname , `/../.history/${name}.json`)
+            })
+        };
+    }
     
     const [err,response] = await to(
         new Input({
@@ -13,6 +25,7 @@ module.exports = async ({name,message,hint,initial}) => {
             message,
             hint,
             initial,
+            history ,
             validate(value,state){
                 if( state && state.name === `command`) return true;
                 if( state && state.name === `name`){

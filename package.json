@@ -1,6 +1,6 @@
 {
   "name": "build-node-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI to build your own Node.js cli",
   "main": "index.js",
   "bin": {

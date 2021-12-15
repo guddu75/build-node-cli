@@ -19,7 +19,7 @@ const { clear , debug } = flags;
 (async () => {
 
     init({clear});
-    input.include(`help`) && cli.showHelp(0);
+    input.includes(`help`) && cli.showHelp(0);
 
     debug && log(flags);
 

@@ -14,7 +14,7 @@ const {clear , debug} = flags;
 (async ()=>{
 
     init({clear});
-    input.includes(`help`) && log(info);
+    input.includes(`help`) && cli.showHelp(0);
 
     debug && log(flags);
     await generate();
